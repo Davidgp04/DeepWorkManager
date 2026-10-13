@@ -1,0 +1,42 @@
+{%extends "taskmanager/base.html"%}
+{% load static %}
+{% block title %}Task List{% endblock %}
+{% block content %}
+<div class="task-list">
+<h1>Deep Work</h1>
+
+
+<ul class="task-list" id="pending-tasks">
+    <li class="task-item add-item">
+        <input type="text" id="new-task-input" placeholder="What do you want to complete..." autocomplete="off">
+    </li>
+    {%for task in non_completed_tasks%}
+    <li class="task-item" data-task-id="{{task.id}}">
+        <input type="checkbox" class="task-list task-checkbox" id="task-{{task.id}}" >
+        <label class="task-title">{{task.title}}</label>
+    </li>
+
+
+    {%endfor%}
+</ul>
+</div>
+
+
+<div class="task-list completed">
+<h2 class="completed">Completed Tasks</h2>
+<ul class="task-list completed" id="completed-tasks">
+    {%for task in completed_tasks%}
+
+        <li class="task-item completed" data-task-id="{{task.id}}">
+            <input type="checkbox" class="task-list task-checkbox completed" id="task-{{task.id}}" checked>
+            <label class="task-title completed">{{task.title}}</label>
+        </li>
+    {%endfor%}
+</ul>
+</div>
+
+</div>
+
+  <script src="{% static 'taskmanager/tasks.js' %}"></script>
+
+{%endblock%}
