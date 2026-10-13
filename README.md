@@ -56,5 +56,3 @@ Unlike traditional task managers, this app helps you plan structured focus block
   python manage.py migrate
   python manage.py runserver
 ```
-5. 
-6. 
