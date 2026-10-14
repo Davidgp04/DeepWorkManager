@@ -67,3 +67,8 @@ def create_task(request):
         "response_status": "success",
     })
 
+@require_POST
+def delete_task(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    task.delete()
+    return JsonResponse({"response_status": "success"})

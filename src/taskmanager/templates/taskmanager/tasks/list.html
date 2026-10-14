@@ -14,22 +14,25 @@
     <li class="task-item" data-task-id="{{task.id}}">
         <input type="checkbox" class="task-list task-checkbox" id="task-{{task.id}}" >
         <label class="task-title">{{task.title}}</label>
+        <ion-icon name="trash-outline" class="trash-icon"></ion-icon>
     </li>
-
-
+    
+    
     {%endfor%}
 </ul>
 </div>
 
 
 <div class="task-list completed">
-<h2 class="completed">Completed Tasks</h2>
-<ul class="task-list completed" id="completed-tasks">
-    {%for task in completed_tasks%}
-
+    <h2 class="completed">Completed Tasks</h2>
+    <ul class="task-list completed" id="completed-tasks">
+        {%for task in completed_tasks%}
+        
         <li class="task-item completed" data-task-id="{{task.id}}">
             <input type="checkbox" class="task-list task-checkbox completed" id="task-{{task.id}}" checked>
             <label class="task-title completed">{{task.title}}</label>
+            <ion-icon name="trash-outline" class="trash-icon"></ion-icon>
+
         </li>
     {%endfor%}
 </ul>

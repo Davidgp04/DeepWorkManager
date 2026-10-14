@@ -44,6 +44,7 @@ h1 {
     padding: 2px;
 }
 
+
 .task-item {
   display: flex;
   align-items: center;
@@ -53,6 +54,8 @@ h1 {
   padding: 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  margin: auto;
+  width: 95%;
   /* margin-left: 0px; */
 }
 .task-list label{
@@ -85,7 +88,8 @@ background-color: #fff;
 }
 
 h2.completed{
-    margin-left: 10px;
+    width: 90%;
+    margin-left: 20px;
 }
 
 .add-item input{
@@ -95,4 +99,17 @@ h2.completed{
     box-shadow:none;
     background-color: #fff;
     width: 50%;
+}
+
+.trash-icon {
+    /* color: #ff4d4d; */
+    color: #30343f;
+    cursor: pointer;
+    margin-left: auto;
+}
+.completed .trash-icon {
+    background-color: #e0e0e0;
+}
+.trash-icon:hover {
+    color: #ff4d4d;
 }
